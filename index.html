@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,9 +18,9 @@
             </div>
             <nav class="navigation">
               <ul class="nav-ul">
-                <li>Студія</li>
-                <li>Портфоліо</li>
-                <li>Контакти</li>
+                <li><a class="active" href="./index.html">Студія</a></li>
+                <li><a href="./portfolio.html">Портфоліо</a></li>
+                <li><a href="#">Контакти</a></li>
               </ul>
             </nav>
           </div>
@@ -49,55 +49,58 @@
         </section>
         <section class="intro">
           <div class="intro-container">
-            <div class="intro-inner">
-              <div class="box-intro">
-                <span>УВАГА ДО ДЕТАЛЕЙ</span>
-                <p>
-                  Ідейні міркування, і навіть початок повсякденної роботи з
-                  формування позиції.
-                </p>
-              </div>
-              <div class="box-intro">
-                <span>ПУНКТУАЛЬНІСТЬ</span>
-                <p>
-                  Завдання організації, особливо рамки і місце навчання кадрів
-                  тягне у себе.
-                </p>
-              </div>
-              <div class="box-intro">
-                <span>ПЛАНУВАННЯ</span>
-                <p>
-                  Так само консультація з широким активом значною мірою
-                  зумовлює.
-                </p>
-              </div>
-              <div class="box-intro">
-                <span>СУЧАСНІ ТЕХНОЛОГІЇ</span>
-                <p>
-                  Значимість цих проблем настільки очевидна, що реалізація
-                  планових завдань.
-                </p>
-              </div>
+            <div class="box-intro">
+              <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p>
+                Ідейні міркування, і навіть початок повсякденної роботи з
+                формування позиції.
+              </p>
+            </div>
+            <div class="box-intro">
+              <h3>ПУНКТУАЛЬНІСТЬ</h3>
+              <p>
+                Завдання організації, особливо рамки і місце навчання кадрів
+                тягне у себе.
+              </p>
+            </div>
+            <div class="box-intro">
+              <h3>ПЛАНУВАННЯ</h3>
+              <p>
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
+            </div>
+            <div class="box-intro">
+              <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p>
+                Значимість цих проблем настільки очевидна, що реалізація
+                планових завдань.
+              </p>
             </div>
             <div class="intro-gallery">
-              <h1>Чим ми займаємося</h1>
+              <h3>Чим ми займаємося</h3>
               <div class="img-container">
                 <div class="img-box">
                   <img
+                    width="370px"
+                    height="294px"
                     src="./public/eff34a388bbc6409758a002e5a58c3ca.jpg"
-                    alt="alt"
+                    alt="Веб-сайт"
                   />
                 </div>
                 <div class="img-box">
                   <img
+                    width="370px"
+                    height="294px"
                     src="./public/fe209b7db875477ca0f844823574082d.jpg"
-                    alt="alt"
+                    alt="Додатки"
                   />
                 </div>
                 <div class="img-box">
                   <img
+                    width="370px"
+                    height="294px"
                     src="./public/ff490664ba91f138b9f708e01d65306a%20(1).jpg"
-                    alt="alt"
+                    alt="Дизайн"
                   />
                 </div>
               </div>
@@ -106,42 +109,62 @@
         </section>
         <section class="team-section">
           <div class="team-container">
-            <h1>Наша команда</h1>
+            <h3>Наша команда</h3>
             <div class="team-intro">
               <div class="team-box">
                 <div class="team-img-box">
-                  <img src="./public/img.jpg" alt="Ігор Дем'яненко" />
+                  <img
+                    width="270px"
+                    height="260px"
+                    src="./public/img.jpg"
+                    alt="Ігор Дем'яненко"
+                  />
                 </div>
                 <div class="team-person">
-                  <span class="team-name">Ігор Дем'яненко</span>
-                  <span class="team-role">Product Designer</span>
+                  <h3 class="team-name">Ігор Дем'яненко</h3>
+                  <p class="team-role">Product Designer</p>
                 </div>
               </div>
               <div class="team-box">
                 <div class="team-img-box">
-                  <img src="./public/img%20(1).jpg" alt="Ольга Рєпіна" />
+                  <img
+                    width="270px"
+                    height="260px"
+                    src="./public/img%20(1).jpg"
+                    alt="Ольга Рєпіна"
+                  />
                 </div>
                 <div class="team-person">
-                  <span class="team-name">Ольга Рєпіна</span>
-                  <span class="team-role">Frontend Developer</span>
+                  <h3 class="team-name">Ольга Рєпіна</h3>
+                  <p class="team-role">Frontend Developer</p>
                 </div>
               </div>
               <div class="team-box">
                 <div class="team-img-box">
-                  <img src="./public/img%20(2).jpg" alt="Микола Тарасов" />
+                  <img
+                    width="270px"
+                    height="260px"
+                    src="./public/img%20(2).jpg"
+                    alt="Микола Тарасов"
+                  />
                 </div>
                 <div class="team-person">
-                  <span class="team-name">Микола Тарасов</span>
-                  <span class="team-role">Marketing</span>
+                  <h3 class="team-name">Микола Тарасов</h3>
+                  <p class="team-role">Marketing</p>
                 </div>
               </div>
               <div class="team-box">
                 <div class="team-img-box">
-                  <img src="./public/img%20(3).jpg" alt="Михайло Єрмаков" />
+                  <img
+                    width="270px"
+                    height="260px"
+                    src="./public/img%20(3).jpg"
+                    alt="Михайло Єрмаков"
+                  />
                 </div>
                 <div class="team-person">
-                  <span class="team-name">Михайло Єрмаков</span>
-                  <span class="team-role">UI Designer</span>
+                  <h3 class="team-name">Михайло Єрмаков</h3>
+                  <p class="team-role">UI Designer</p>
                 </div>
               </div>
             </div>
@@ -153,7 +176,7 @@
           <div class="logo-sct">
             <div class="logo-text">
               <span>Web</span>
-              <span style="color: #ffff">Studio</span>
+              <span class="span-studio">Studio</span>
             </div>
             <address class="addr-sct">
               <span>Address: 1234 Elm Street, Springfield, IL, USA</span>
