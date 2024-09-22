@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-size: 14px;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -138,26 +138,10 @@ main {
   align-items: center;
   height: 100%;
   padding: 25px;
-}
-
-.inner-bnr {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.bnr-content {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
 }
 
-.bnr-content > h1 {
-  width: 696px;
-  height: 120px;
+.bnr > h1 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
@@ -177,10 +161,6 @@ main {
   transition: all 0.3s ease;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   border: 0;
-}
-
-.order-btn > span {
-  font-family: "Raleway", sans-serif;
   color: #ffffff;
   text-align: center;
   font-weight: 700;
@@ -219,23 +199,14 @@ main {
   margin-bottom: 80px;
 }
 
-.box-intro > span {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #212121;
-}
 
 .box-intro > p {
-  font-family: "Roboto";
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-top: 10px;
 }
 
 .intro-gallery {
@@ -243,7 +214,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .img-container {
