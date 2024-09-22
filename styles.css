@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-size: 14px;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -125,28 +125,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
   padding: 25px;
 }
 
-.inner-bnr {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.bnr-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.bnr-content > h1 {
-  width: 696px;
-  height: 120px;
+.bnr > h1 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
@@ -159,23 +143,21 @@ main {
 }
 
 .order-btn {
-  width: 216px;
-  height: 50px;
+  padding: 10px 30px 10px;
   border-radius: 4px;
   background-color: #2196f3;
   transition: all 0.3s ease;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   border: 0;
-}
-
-.order-btn > span {
-  font-family: "Raleway", sans-serif;
   color: #ffffff;
   text-align: center;
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.06em;
   line-height: 30px;
+}
+
+.order-btn > span {
 }
 
 .order-btn:hover {
@@ -279,7 +261,6 @@ main {
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
-
 }
 
 .team-container {
