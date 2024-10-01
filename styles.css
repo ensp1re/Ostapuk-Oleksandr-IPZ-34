@@ -438,7 +438,7 @@ footer {
   background: #f5f4fa;
   border-radius: 4px;
   border: 0;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .filter-button:hover {
