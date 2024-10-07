@@ -40,7 +40,8 @@ body {
   margin: 0 auto;
 }
 
-/* INDEX */
+/* index */
+/*  test */
 
 header {
   display: flex;
@@ -357,7 +358,7 @@ footer {
   font-style: normal;
 }
 
-#span-studio {
+.span-studio {
   color: white;
 }
 
