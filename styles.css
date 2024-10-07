@@ -40,7 +40,6 @@ body {
   margin: 0 auto;
 }
 
-
 header {
   display: flex;
   padding: 25px;
@@ -167,7 +166,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 
 .bnr-text {
   font-family: var(--font-primary);
