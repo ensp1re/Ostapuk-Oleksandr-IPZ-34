@@ -40,7 +40,6 @@ body {
   margin: 0 auto;
 }
 
-/* INDEX */
 
 header {
   display: flex;
@@ -168,6 +167,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 
 .bnr-text {
   font-family: var(--font-primary);
