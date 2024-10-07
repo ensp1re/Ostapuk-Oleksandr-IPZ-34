@@ -11,7 +11,16 @@
   --box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-ul, li, h1, h2, h3, p, a, span, div, img {
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+a,
+span,
+div,
+img {
   margin: 0;
   padding: 0;
 }
@@ -199,7 +208,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .section--third .container,
@@ -210,7 +218,6 @@ main {
 .section--second .container {
   gap: 20px;
 }
-
 
 .box-intro {
   flex: 1 1 270px;
@@ -276,7 +283,6 @@ main {
   background-color: var(--color-background);
   display: flex;
   justify-content: space-between;
-  
 }
 
 .team-intro {
@@ -340,7 +346,6 @@ footer {
   padding: 50px;
   background-color: var(--color-dark);
 }
-
 
 .logo-sct,
 .addr-sct {
