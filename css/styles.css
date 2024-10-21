@@ -1,3 +1,5 @@
+@import "node_modules/modern-normalize/modern-normalize.css";
+
 :root {
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Raleway", sans-serif;
@@ -107,7 +109,7 @@ header > .container {
   gap: 40px;
 }
 
-li > a {
+.nav-li > a {
   text-decoration: none;
   color: var(--color-secondary);
   font-family: var(--font-primary);
@@ -115,7 +117,7 @@ li > a {
   transition: color 0.3s;
 }
 
-li > a:hover {
+.nav-li > a:hover {
   color: var(--color-primary);
   cursor: pointer;
 }
@@ -183,7 +185,8 @@ li > a:hover {
   gap: 10px;
 }
 
-.team-social > li {
+.team-social > li,
+.team-social-link > a {
   width: 44px;
   height: 44px;
   display: flex;
@@ -217,7 +220,8 @@ footer .container {
   color: var(--color-white);
 }
 
-.footer-social > li {
+.footer-social > li,
+.footer-social-link > a {
   width: 44px;
   height: 44px;
   display: flex;
@@ -243,6 +247,16 @@ footer .container {
   background-color: var(--color-primary);
   transform: scale(0.9);
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.team-social-link > a:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.footer-social-link > a:hover {
+  color: var(--color-primary);
   cursor: pointer;
 }
 
@@ -475,7 +489,8 @@ main {
 }
 
 footer {
-  padding: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--color-dark);
 }
 
