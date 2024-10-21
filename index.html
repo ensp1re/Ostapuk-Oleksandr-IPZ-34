@@ -22,7 +22,64 @@
     />
   </head>
   <body class="custom-scroll">
+    <script src="./js/modal.js"></script>
     <div class="page">
+      <!-- MODAL -->
+      <div class="modal-overlay is-hidden"></div>
+      <div class="contact-modal is-hidden">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Залиште свої дані, ми вам передзвонимо</h2>
+          <form class="contact-form">
+            <div class="contact-field">
+              <label for="name">Ім'я</label>
+              <div class="contact-input-box">
+                <svg class="icon icon-person">
+                  <use xlink:href="images/contact.svg#icon-person"></use>
+                </svg>
+                <input type="text" name="name" class="contact-input" />
+              </div>
+            </div>
+            <div class="contact-field">
+              <label for="phone">Телефон</label>
+              <div class="contact-input-box">
+                <svg class="icon icon-phone">
+                  <use xlink:href="images/contact.svg#icon-phone"></use>
+                </svg>
+                <input type="tel" name="phone" class="contact-input" />
+              </div>
+            </div>
+            <div class="contact-field">
+              <label for="email">Email</label>
+              <div class="contact-input-box">
+                <svg class="icon icon-contact-email">
+                  <use xlink:href="images/contact.svg#icon-email"></use>
+                </svg>
+                <input type="email" name="email" class="contact-input" />
+              </div>
+            </div>
+            <div class="contact-field">
+              <label for="message">Повідомлення</label>
+              <textarea
+                name="message"
+                class="contact-textarea"
+                rows="6"
+                placeholder="Введіть текст"
+              ></textarea>
+            </div>
+            <div class="agreement-section">
+              <input type="checkbox" name="agreement" id="agreement" />
+              <p>
+                Погоджуюся з розсилкою та приймаю
+                <a target="_blank" href="#" class="href-agreement">
+                  Умови договору
+                </a>
+              </p>
+            </div>
+            <button class="contact-btn" type="submit">Відправити</button>
+          </form>
+        </div>
+      </div>
       <!-- INDEX -->
       <header>
         <div class="container">
@@ -133,6 +190,9 @@
                   src="./images/eff34a388bbc6409758a002e5a58c3ca.jpg"
                   alt="Веб-сайт"
                 />
+                <div class="img-description">
+                  <h3>Десктопні додатки</h3>
+                </div>
               </div>
               <div class="img-box">
                 <img
@@ -141,6 +201,9 @@
                   src="./images/fe209b7db875477ca0f844823574082d.jpg"
                   alt="Додатки"
                 />
+                <div class="img-description">
+                  <h3>Мобільні додатки</h3>
+                </div>
               </div>
               <div class="img-box">
                 <img
@@ -149,6 +212,9 @@
                   src="./images/ff490664ba91f138b9f708e01d65306a%20(1).jpg"
                   alt="Дизайн"
                 />
+                <div class="img-description">
+                  <h3>Дизайнерські рішення</h3>
+                </div>
               </div>
             </div>
           </div>
@@ -443,6 +509,23 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="subsribe-section">
+            <h3>Підпишіться на розсилку</h3>
+            <form class="subsribe-form">
+              <input
+                type="email"
+                name="email"
+                class="subscribe-input"
+                placeholder="Email"
+              />
+              <button class="subcribe-btn" type="submit">
+                <span> Підписатися </span>
+                <svg class="icon icon-send">
+                  <use xlink:href="images/icon.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </footer>
