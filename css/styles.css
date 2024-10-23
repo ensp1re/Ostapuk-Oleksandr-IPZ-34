@@ -30,6 +30,10 @@ img {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 img {
   display: block;
 }
@@ -194,7 +198,7 @@ header > .container {
   gap: 10px;
 }
 
-.team-social > li,
+.team-social > a,
 .team-social-link > a {
   width: 44px;
   height: 44px;
@@ -231,7 +235,7 @@ footer .container {
   color: var(--color-white);
 }
 
-.footer-social > li,
+.footer-social > a,
 .footer-social-link > a {
   width: 44px;
   height: 44px;
@@ -260,7 +264,6 @@ footer .container {
   background-color: var(--color-primary);
   transform: scale(0.9);
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .team-social-link > a:hover {
