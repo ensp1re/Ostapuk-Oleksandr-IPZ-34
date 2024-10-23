@@ -28,7 +28,7 @@
       <div class="modal-overlay is-hidden"></div>
       <div class="contact-modal is-hidden">
         <div class="modal-content">
-          <span class="close">&times;</span>
+          <button type="button" class="close">&times;</button>
           <h2>Залиште свої дані, ми вам передзвонимо</h2>
           <form class="contact-form">
             <div class="contact-field">
@@ -37,7 +37,12 @@
                 <svg class="icon icon-person">
                   <use xlink:href="images/contact.svg#icon-person"></use>
                 </svg>
-                <input type="text" name="name" class="contact-input" />
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="contact-input"
+                />
               </div>
             </div>
             <div class="contact-field">
@@ -46,7 +51,12 @@
                 <svg class="icon icon-phone">
                   <use xlink:href="images/contact.svg#icon-phone"></use>
                 </svg>
-                <input type="tel" name="phone" class="contact-input" />
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="contact-input"
+                />
               </div>
             </div>
             <div class="contact-field">
@@ -55,19 +65,25 @@
                 <svg class="icon icon-contact-email">
                   <use xlink:href="images/contact.svg#icon-email"></use>
                 </svg>
-                <input type="email" name="email" class="contact-input" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="contact-input"
+                />
               </div>
             </div>
             <div class="contact-field">
               <label for="message">Повідомлення</label>
               <textarea
                 name="message"
+                id="message"
                 class="contact-textarea"
                 rows="6"
                 placeholder="Введіть текст"
               ></textarea>
             </div>
-            <div class="agreement-section">
+            <label class="agreement-label" for="agreement">
               <input type="checkbox" name="agreement" id="agreement" />
               <p>
                 Погоджуюся з розсилкою та приймаю
@@ -75,7 +91,7 @@
                   Умови договору
                 </a>
               </p>
-            </div>
+            </label>
             <button class="contact-btn" type="submit">Відправити</button>
           </form>
         </div>
@@ -513,9 +529,11 @@
           <div class="subsribe-section">
             <h3>Підпишіться на розсилку</h3>
             <form class="subsribe-form">
+              <label for="email" hidden></label>
               <input
                 type="email"
                 name="email"
+                id="email"
                 class="subscribe-input"
                 placeholder="Email"
               />
