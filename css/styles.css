@@ -134,7 +134,6 @@ header > .container {
   color: var(--color-secondary);
 }
 
-
 .nav-addr {
   display: flex;
   justify-content: space-between;
@@ -417,7 +416,6 @@ main {
   max-width: 370px;
 }
 
-
 .img-description {
   position: absolute;
   display: block;
@@ -581,7 +579,6 @@ footer {
   line-height: 1.2;
   color: var(--color-secondary);
 }
-
 
 .icon-logo-6,
 .icon-logo-5,
@@ -790,6 +787,11 @@ p {
   padding: 11px 30px;
   gap: 10px;
   cursor: pointer;
+}
+
+.subcribe-btn:hover {
+  background: #0f6ab4;
+  transition: var(--transition);
 }
 
 .subcribe-btn > span {
@@ -1074,7 +1076,8 @@ p {
 }
 
 .portfolio-box:hover {
-  box-shadow: 1px 4px 6px 0px #00000029,  0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
   transition: box-shadow var(--transition);
 }
 
