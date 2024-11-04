@@ -122,18 +122,13 @@ header > .container {
   text-decoration: none;
   font-family: var(--font-primary);
   font-weight: 500;
-  transition: color var(--transition);
+  transition: var(--transition);
 }
 
-.nav-li > a:hover {
+.nav-li >:hover {
   color: var(--color-primary);
   cursor: pointer;
 }
-
-.nav-li > a:not(.active) {
-  color: var(--color-secondary);
-}
-
 
 .nav-addr {
   display: flex;
@@ -156,7 +151,7 @@ header > .container {
 .addr > a {
   text-decoration: none;
   color: var(--color-tertiary);
-  transition: color var(--transition) ease;
+  transition: var(--transition);
 }
 
 .addr:hover {
@@ -417,7 +412,6 @@ main {
   max-width: 370px;
 }
 
-
 .img-description {
   position: absolute;
   display: block;
@@ -581,7 +575,6 @@ footer {
   line-height: 1.2;
   color: var(--color-secondary);
 }
-
 
 .icon-logo-6,
 .icon-logo-5,
@@ -790,6 +783,11 @@ p {
   padding: 11px 30px;
   gap: 10px;
   cursor: pointer;
+}
+
+.subcribe-btn:hover {
+  background: #0f6ab4;
+  transition: var(--transition);
 }
 
 .subcribe-btn > span {
@@ -1074,7 +1072,8 @@ p {
 }
 
 .portfolio-box:hover {
-  box-shadow: 1px 4px 6px 0px #00000029,  0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
   transition: box-shadow var(--transition);
 }
 
