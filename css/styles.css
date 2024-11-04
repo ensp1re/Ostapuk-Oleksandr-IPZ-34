@@ -122,16 +122,12 @@ header > .container {
   text-decoration: none;
   font-family: var(--font-primary);
   font-weight: 500;
-  transition: color var(--transition);
+  transition: var(--transition);
 }
 
-.nav-li > a:hover {
+.nav-li >:hover {
   color: var(--color-primary);
   cursor: pointer;
-}
-
-.nav-li > a:not(.active) {
-  color: var(--color-secondary);
 }
 
 .nav-addr {
@@ -155,7 +151,7 @@ header > .container {
 .addr > a {
   text-decoration: none;
   color: var(--color-tertiary);
-  transition: color var(--transition) ease;
+  transition: var(--transition);
 }
 
 .addr:hover {
