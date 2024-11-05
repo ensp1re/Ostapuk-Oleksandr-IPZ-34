@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const modalOverlay = document.querySelector('.modal-overlay');
     const contactModal = document.querySelector('.contact-modal');
-    const closeModal = document.querySelector('.close');
-    const openModalButton = document.querySelector('.order-btn');
+    const closeModal = document.querySelector('.contact-modal__close');
+    const openModalButton = document.querySelector('.section--first__button--order');
 
     function openModal() {
-        modalOverlay.classList.remove('is-hidden');
-        contactModal.classList.remove('is-hidden');
+        modalOverlay.classList.remove('modal-overlay--hidden');
+        contactModal.classList.remove('contact-modal--hidden');
     }
 
     function closeModalFunc() {
-        modalOverlay.classList.add('is-hidden');
-        contactModal.classList.add('is-hidden');
+        modalOverlay.classList.add('modal-overlay--hidden');
+        contactModal.classList.add('contact-modal--hidden');
     }
 
     openModalButton.addEventListener('click', openModal);

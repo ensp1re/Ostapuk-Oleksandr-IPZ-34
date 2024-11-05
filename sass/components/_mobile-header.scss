@@ -1,0 +1,136 @@
+@import "../utils/variables.scss";
+
+
+
+.mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: map-get($colors, white);
+    z-index: 999;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--hidden {
+        display: none;
+    }
+
+    &__close {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    color: map-get($colors, secondary);
+    transition: $transtion;
+
+    span {
+      font-size: 54px;
+    }
+
+    &:hover {
+      color: map-get($colors, primary);
+      cursor: pointer;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__navigation-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: map-get($colors, secondary);
+    transition: $transtion;
+
+    &:hover {
+      color: map-get($colors, primary);
+      cursor: pointer;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__phone {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+    transition: $transtion;
+
+    &:hover {
+      color: #0f6ab4;
+      cursor: pointer;
+    }
+  }
+
+  &__email {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: map-get($colors, tertiary);
+    transition: $transtion;
+    font-style: normal;
+
+    &:hover {
+      color: map-get($colors, primary);
+      cursor: pointer;
+    }
+  }
+
+  &__social-links {
+    margin-top: 32px;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__social-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+    transition: $transtion;
+    position: relative;
+
+    &:hover {
+      color: #0f6ab4;
+      cursor: pointer;
+    }
+
+    &:not(:last-child)::after {
+      content: "|";
+      position: absolute;
+      right: -10px;
+      color: map-get($colors, tertiary);
+    }
+  }
+}

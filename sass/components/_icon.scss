@@ -1,0 +1,52 @@
+.header__icon, .icon {
+  display: inline;
+  stroke-width: 0;
+}
+
+.icon-instagram,
+.icon-x,
+.icon-linkedin,
+.icon-facebook {
+  width: 20px;
+  height: 20px;
+}
+
+.header__icon--smartphone {
+  max-width: 10px;
+  max-height: 16px;
+}
+
+.header__icon--email {
+  max-width: 16px;
+  max-height: 12px;
+}
+
+.icon-logo-6,
+.icon-logo-5,
+.icon-logo-4,
+.icon-logo-3,
+.icon-logo-2,
+.icon-logo-1 {
+  width: 160px;
+  height: 60px;
+}
+
+.icon-person,
+.icon-contact-email,
+.icon-phone {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--color-secondary);
+  width: 18px;
+  height: 18px;
+}
+
+.icon-antena,
+.icon-clock,
+.icon-astronaut,
+.icon-diagram {
+  width: 70px;
+  height: 70px;
+}

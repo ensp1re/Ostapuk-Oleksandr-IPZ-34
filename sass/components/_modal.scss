@@ -1,0 +1,235 @@
+@import "../utils/variables.scss";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: block;
+  opacity: 0;
+  &--hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &:not(&--hidden) {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.contact-modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  max-width: 528px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: map-get($colors, white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  width: 100%;
+
+  &--hidden {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    pointer-events: none;
+  }
+
+  &:not(&--hidden) {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    padding: 40px 39px 40px 41px;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 1.2;
+    color: map-get($colors, secondary);
+    margin-bottom: 12px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: map-get($colors, tertiary);
+    font-size: 24px;
+    border: 1px solid #0000001a;
+    background: transparent;
+    transition: $transtion;
+
+    &:hover {
+      cursor: pointer;
+      color: map-get($colors, primary);
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.9;
+    color: map-get($colors, tertiary);
+  }
+
+  &__input-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    transition: $transtion;
+    &:focus-within .icon {
+      color: map-get($colors, primary);
+    }
+  }
+
+  &__input {
+    padding: 12px 0 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    transition: $transtion;
+
+    &:focus {
+      border: 1px solid map-get($colors, primary);
+      border-radius: 4px;
+    }
+  }
+
+  &__textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 16px;
+    outline: none;
+
+    transition: $transtion;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.8;
+      padding-top: 3px;
+      color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+      border: 1px solid map-get($colors, primary);
+      border-radius: 4px;
+    }
+  }
+
+  &__submit-btn {
+    padding: 10px 65px;
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: map-get($colors, white);
+    border: 0;
+    margin-top: 20px;
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 16px;
+    transition: $transtion;
+    line-height: 30px;
+    letter-spacing: 0.96;
+    &:hover {
+      cursor: pointer;
+      background: #0f6ab4;
+    }
+  }
+
+  &__agreement-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & > input {
+      appearance: none;
+      border: 2px solid map-get($colors, secondary);
+      cursor: pointer;
+      transition: $transtion;
+      width: 16px;
+      height: 16px;
+
+      &:checked {
+        background: map-get($colors, primary);
+        border: 2px solid map-get($colors, primary);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+    }
+  }
+
+  &__agreement-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.8;
+    color: map-get($colors, tertiary);
+    margin-left: 12px;
+  }
+
+  &__agreement-link {
+    color: map-get($colors, primary);
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-modal {
+    width: 450px;
+  }
+}

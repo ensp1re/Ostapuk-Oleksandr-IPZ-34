@@ -1,0 +1,21 @@
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Raleway", sans-serif;
+$box-shadow-light: 0 8px 8px rgba(0, 0, 0, 0.2);
+$box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.3);
+$transtion: .3s cubic-bezier(0.4, 0, 0.2, 1);
+$background: #f5f4fa;
+
+// Define a map of colors
+$colors: (
+  primary: #2196f3,
+  secondary: #212121,
+  tertiary: #757575,
+  background: #f5f4fa,
+  dark: #2f303a,
+  white: #ffffff,
+  svg: #afb1b8,
+  bg-feature-color: #f5f4fa,
+);
+
+// example
+// color: map-get($colors, primary);

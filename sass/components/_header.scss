@@ -1,0 +1,167 @@
+@import "../utils/variables.scss";
+
+.header {
+  display: flex;
+  padding: 25px 0;
+  border: solid #ececec 1px;
+  align-items: center;
+  max-height: 80px;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 94px;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 94px;
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
+
+  &__right {
+    justify-content: flex-end;
+  }
+
+  &__logo-text {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: map-get($colors, secondary);
+
+    & > .header__logo-part:nth-of-type(1) {
+      color: map-get($colors, primary);
+    }
+  }
+
+  &__navigation {
+    & > .header__nav-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: map-get($colors, secondary);
+      display: flex;
+      gap: 40px;
+      /* Портфоліо */
+
+      & > .header__nav-li {
+        .header__nav-link {
+          text-decoration: none;
+          font-family: $font-primary;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+          line-height: 1.2;
+          color: map-get($colors, secondary);
+
+          &--active {
+            position: relative;
+            color: map-get($colors, primary);
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 46px;
+              left: 0;
+              display: block;
+              width: 100%;
+              height: 4px;
+              background: map-get($colors, primary);
+              border-radius: 2px;
+            }
+          }
+
+          &:hover {
+            color: map-get($colors, primary);
+            cursor: pointer;
+            transition: $transtion;
+          }
+        }
+      }
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+  }
+
+  &__nav-addr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-primary;
+    font-weight: 500;
+    gap: 40px;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-primary);
+    }
+
+    .header__addr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: $transtion;
+      color: map-get($colors, tertiary);
+
+      &:hover,
+      & > a:hover {
+        color: map-get($colors, primary);
+      }
+
+      a {
+        text-decoration: none;
+        color: map-get($colors, tertiary);
+        transition: $transtion;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .header__nav-addr {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__navigation {
+      display: none;
+    }
+
+    &__nav-addr {
+      display: none;
+    }
+
+    &__menu-btn {
+      display: inline-block;
+      svg {
+        transition: $transtion;
+        width: 40px;
+        height: 35px;
+        &:hover {
+          cursor: pointer;
+          color: map-get($colors, primary);
+          filter: invert(32%) sepia(94%) saturate(747%) hue-rotate(182deg)
+            brightness(103%) contrast(101%);
+        }
+      }
+    }
+  }
+}
