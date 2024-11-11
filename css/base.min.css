@@ -970,6 +970,7 @@ a {
   align-items: center;
   color: #afb1b8;
   border: 1px solid #afb1b8;
+  border-radius: 4px;
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section--fifth__clients-intro li:hover {
