@@ -707,6 +707,11 @@ a {
   padding: 20px;
   cursor: pointer;
 }
+.filter-buttons__filter-button.active {
+  background-color: #2196f3; 
+  color: white;
+}
+
 .section--portfolio__portfolio-container .portfolio-container__portfolio-box .portfolio-box__intro-portfolio h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
