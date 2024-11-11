@@ -17,6 +17,8 @@
 
     &--hidden {
         display: none;
+        background: transparent;
+        border: 0;
     }
 
     &__close {
@@ -27,6 +29,8 @@
     padding: 0;
     color: map-get($colors, secondary);
     transition: $transtion;
+    background: transparent;
+    border: 0;
 
     span {
       font-size: 54px;

@@ -19,6 +19,11 @@ img {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  all: unset;
+}
+
 img {
   display: block;
 }
