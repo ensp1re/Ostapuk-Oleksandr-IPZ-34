@@ -787,6 +787,15 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 920px) {
+  .section--second .container {
+    padding-bottom: 94px;
+  }
+}
+
+.section--second {
+    padding-bottom: 0;
+}
 
 .section--second .container {
   display: grid;

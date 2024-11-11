@@ -64,6 +64,10 @@
 
 .section--second {
 
+  @media (max-width: 768px) {
+    padding-bottom: 94px;
+    
+  }
 
   .container {
     display: grid;
