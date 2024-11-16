@@ -1,4 +1,4 @@
-# Ostapuk Oleksandr IPZ-34 Lab 5
+
 
 ## Table of Contents
 - [Introduction](#introduction)
