@@ -1,0 +1,108 @@
+@import "node_modules/modern-normalize/modern-normalize.css";
+@import "../utils/variables.scss";
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  all: unset;
+}
+
+img {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: $font-primary;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 94px 0 94px 0;
+}
+
+.icon {
+  display: inline;
+  stroke-width: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.section--third,
+.section--fourth,
+.section--fifth {
+  .container {
+    text-align: center;
+  }
+}
+
+.section--third .container,
+.section--fourth .container,
+.section--fifth .container {
+  h2 {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: map-get($colors, secondary);
+  }
+}
+
+.page__body--scroll-custom {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+}

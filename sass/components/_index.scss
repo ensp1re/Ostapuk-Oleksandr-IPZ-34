@@ -1,0 +1,294 @@
+@import "../utils/variables.scss";
+
+.section--first {
+  flex: 1;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/hero.jpg");
+  position: relative;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 920px) {
+    min-height: 400px;
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: map-get($colors, white);
+  }
+
+  &__button--order {
+    font-family: $font-primary;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: map-get($colors, primary);
+    transition: $transtion;
+    box-shadow: $box-shadow-light;
+    border: 0;
+    color: map-get($colors, white);
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+
+    &:hover {
+      transform: scale(0.99);
+      box-shadow: $box-shadow-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+.section--second {
+
+  @media (max-width: 768px) {
+    padding-bottom: 94px;
+    
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+
+  &__box-intro {
+    grid-row-start: span 1;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: map-get($colors, secondary);
+    font-family: $font-primary;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: map-get($colors, tertiary);
+    margin-top: 10px;
+  }
+
+  &__feature-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colors, bg-feature-color);
+    height: 120px;
+    margin-bottom: 30px;
+  }
+}
+
+.section--third {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 294px;
+  }
+
+  &__img-description {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+  }
+
+  &__img-title {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: map-get($colors, white);
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.section--fourth {
+  flex: 1;
+  background-color: #f5f4fa;
+  display: flex;
+  justify-content: space-between;
+
+  .container {
+    width: 100%;
+  }
+
+  &__team-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  &__team-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &__team-img-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__team-img-box > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__team-person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colors, white);
+    padding: 25px;
+    gap: 10px;
+    height: 100%;
+  }
+
+  &__team-name,
+  &__team-role {
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__team-name {
+    font-weight: 700;
+    color: map-get($colors, secondary);
+  }
+
+  &__team-role {
+    font-weight: 400;
+    color: map-get($colors, tertiary);
+  }
+
+  &__team-social {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 10px;
+  }
+
+  &__team-social > a,
+  &__team-social-link > a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: map-get($colors, svg);
+  }
+
+  &__team-social > li:hover {
+    transition: color $transtion, background-color $transtion,
+      transform $transtion;
+    color: map-get($colors, white);
+    background-color: map-get($colors, primary);
+    transform: scale(0.9);
+    border-radius: 50%;
+  }
+
+  &__team-social-link > a:hover {
+    color: map-get($colors, white);
+    cursor: pointer;
+  }
+}
+
+.section--fifth {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__clients-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 30px;
+    list-style: none;
+    margin-top: 50px;
+
+    li {
+      height: 92px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: map-get($colors, svg);
+      border: 1px solid #afb1b8;
+      transition: $transtion;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid map-get($colors, primary);
+        color: map-get($colors, primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .section--third {
+    display: none;
+  }
+}
+
+@media (max-width: 605px) {
+  .section--second {
+    &__title {
+      text-align: center;
+    }
+  }
+}
